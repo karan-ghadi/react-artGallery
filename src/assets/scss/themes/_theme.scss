@@ -1,0 +1,131 @@
+body {
+  @include font-size($base-font-sizes);
+  font-family: $fontFamily;
+  color: $primaryClr;
+  font-weight: 400;
+  padding-top: 200px;
+}
+
+.custom-container {
+  padding: 1% 8.3% 5%;
+}
+
+a {
+  text-decoration: none;
+  color: $secondaryClr;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: $secondaryClr;
+  }
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  @include font-size($base-font-sizes);
+}
+
+.text-green {
+  color: $successClr;
+}
+
+.text-red {
+  color: $errorClr;
+}
+
+.text-gray {
+  color: $lightGrayClr;
+}
+
+// Content Title
+.content-box {
+  color: $lightGrayClr;
+  margin-bottom: 15px;
+
+  .content-title {
+    h6 {
+      img {
+        display: inline-block;
+        vertical-align: text-top;
+        margin-right: 20px;
+      }
+
+      @include font-size($base-font-sizes);
+      text-transform: uppercase;
+    }
+  }
+
+  .content-stats {
+    ul {
+      display: flex;
+
+      li {
+        text-transform: capitalize;
+        margin-right: 21px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        span {
+          font-weight: 600;
+          color: $primaryClr;
+        }
+      }
+    }
+  }
+}
+
+// Server-Onboarding
+.components {
+  .title {
+    h6 {
+      color: $primaryClr;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      font-weight: 400;
+    }
+
+    img {
+      display: inline-block;
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+  }
+
+  .form-box {
+    margin: 40px 0 60px;
+
+    .wrapper {
+      @include border-radius(20px);
+      @include box-shadow(0 .2rem 2.2rem rgba(0, 0, 0, .15));
+      padding: 30px 40px;
+
+      .form {
+        .dropdown-menu {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.blockchain-status {
+  .list-group {
+    .list-group-item {
+      img {
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: 10px;
+      }
+    }
+  }
+}

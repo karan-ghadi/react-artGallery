@@ -1,0 +1,36 @@
+.form {
+  .form-control {
+    @include border-radius(30px);
+    padding: 10px 35px;
+    height: auto;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  button[disabled],
+  html input[disabled]{
+    opacity: 0.6;
+  }
+  .button--default,
+  .button--validate,
+  .button--delete {
+    padding: 10px 35px;
+    @media (min-width:320px) and (max-width:767.98px) {
+      padding: 10px;
+    }
+  }
+
+  .err-text {
+    color: $errorClr;
+    display: block;
+    margin-top: 10px;
+  }
+
+  input.ng-invalid.ng-touched {
+    border: 1px solid $errorClr;
+  }
+  select {
+    background: url(../images/icons/dropdown-icon.png) no-repeat;
+    background-position: 95% 50%;
+  }
+}

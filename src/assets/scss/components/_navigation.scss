@@ -1,0 +1,202 @@
+/**
+ * Header : Stylesheet
+ */
+header {
+	@include box-shadow(0 0.1rem 3.5rem rgba(0, 0, 0, 0.1));
+	padding: 15px 0;
+  background: $whiteClr;
+  @media (min-width:320px) and (max-width:767px) {
+    padding: 10px 0;
+  }
+	.navbar-toggler{
+		background: $secondaryClr;
+		.navbar-toggler-icon {
+			height: auto;
+			width: auto;
+			color: $whiteClr;
+		}
+	}
+	.navbar {
+		padding: 0;
+
+		.navbar-collapse{
+			margin-top: 15px;
+		}
+	}
+	// Top Section .
+	.subheader {
+		padding: 0 8.3% 15px 8.3%;
+    border-bottom: 1px solid $borderClr;
+    @media (min-width:320px) and (max-width:767px) {
+      padding: 0 8.3% 5px 8.3%;
+    }
+	}
+	.navbar-brand {
+			padding: 0;
+      margin: 0;
+      @media (min-width:767px) and (max-width:990px) {
+	    	width: 200px;
+	  	}
+			@media (min-width:320px) and (max-width:990px) {
+        width: 200px;
+        margin-bottom: 10px;
+	  	}
+		}
+		.subheader-links {
+			ul {
+				float: left;
+				@media (max-width:990px) {
+		    	flex-direction: row;
+		  	}
+			}
+			.link-group {
+				margin-right: 11px;
+
+				.nav-item {
+					margin: 0 18px;
+					padding: 10px 0;
+
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+
+			}
+		}
+	// Navigation .
+	.mainheader {
+		padding: 15px 8.3% 0 8.3%;
+    @media (min-width:320px) and (max-width:767px) {
+      padding: 10px 8.3% 0 8.3%;
+    }
+		.navbar-nav {
+			.nav-item {
+				&:first-child {
+					margin-left: 0;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+				.nav-link {
+					@include font-size($small-font-sizes);
+					@include border-radius(25px);
+					@include transition(0.2s all);
+					color: $blackClr;
+					padding: 10px 25px;
+
+					&:hover, &:focus, &:active {
+						@include transition(0.2s all);
+						background: $secondaryClr;
+						color: $whiteClr;
+					}
+					&.active {
+						@include transition(0.2s all);
+						background: $secondaryClr;
+						color: $whiteClr;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Notification
+.notification {
+  @include relative;
+  .notification-count {
+    @include absolute(top 4px right -5px);
+    @include box(20px);
+    @include border-radius(50%);
+    pointer-events: none;
+    background: $secondaryClr;
+    color: $whiteClr;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+
+// Profile navbar section
+.profile {
+  position: relative;
+  padding-left: 15px;
+  @media (min-width:320px) and (max-width:767px) {
+    flex-direction: row;
+    padding-left: 0;
+  }
+  .nav-item {
+    margin: 0 10px;
+    @media (min-width:320px) and (max-width:767px) {
+      margin: 2px 0 0;
+    }
+
+    &:last-child {
+      padding: 14px 0;
+      @media (min-width:320px) and (max-width:767px) {
+        padding: 0;
+      }
+
+      a {
+        @include font-size($base-font-sizes);
+        font-weight: 500;
+      }
+      .dropdown-toggle {
+        &:after {
+          color: $blackClr;
+        }
+      }
+      .dropdown-menu {
+        @include absolute(top 70% left -15px);
+        padding: 0;
+
+        .dropdown-item {
+          @include font-size($base-font-sizes);
+          font-weight: 500;
+          padding: 10px 15px;
+
+          &:hover, &:active, &:focus {
+            background: $secondaryClr;
+            color: $whiteClr;
+          }
+        }
+        .dropdown-divider {
+          margin: 0;
+        }
+      }
+    }
+  }
+  .profile-img {
+    @include box(50px);
+    display: block;
+    @media (min-width:320px) and (max-width:767px) {
+      @include box(55px);
+    }
+
+    img {
+      @include box-shadow(0 0.3rem 1.1rem rgba(0, 0, 0, 0.7));
+      display: inline-block;
+      @media (min-width:320px) and (max-width:767px) {
+        @include box(40px);
+      }
+    }
+  }
+  &:before {
+    @include pseudo;
+    background: $borderClr;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    @media (min-width:320px) and (max-width:767px) {
+      width:0;
+    }
+  }
+}
+.profile-img--mobile.profile-img {
+  display: none;
+  @media (min-width:320px) and (max-width:767px) {
+    display: block;
+  }
+}

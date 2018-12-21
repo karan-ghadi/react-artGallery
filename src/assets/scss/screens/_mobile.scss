@@ -1,0 +1,25 @@
+@media (min-width:320px) and (max-width:767.98px) {
+	body {
+    padding-top: 190px;
+  }
+  header{
+    .subheader, .mainheader{
+      padding: 10px 5% 0;
+    }
+  }
+  .content-box {
+    .content-title {
+      h6 {
+        img {
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+      }
+    }
+    .content-stats {
+      ul {
+        display: block;
+      }
+    }
+  }
+}

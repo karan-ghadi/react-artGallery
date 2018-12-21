@@ -1,0 +1,16 @@
+footer {
+  padding: 15px 0;
+  border-top: 1px solid $borderClr;
+  background: #fff;
+
+  p {
+    @include font-size($extraSmall-font-sizes);
+    font-weight: 300;
+    text-align: center;
+    margin: 0;
+
+    a {
+      font-weight: 300;
+    }
+  }
+}

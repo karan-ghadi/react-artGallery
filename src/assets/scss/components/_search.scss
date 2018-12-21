@@ -1,0 +1,35 @@
+.search {
+  .form {
+    .form-group{
+      margin-bottom: 0;
+    }
+    .search-box {
+      @include border-radius(5px);
+      @include transition(0.4s ease-in-out);
+      background: url(../images/icons/magnify.png) no-repeat 50% 50%;
+      width: 30px;
+      height:30px;
+      padding: 5px 15px;
+      border:0;
+      text-indent: -99999px;
+      @media (min-width:767px) and (max-width:990px) {
+        height: auto;
+      }
+      &:focus {
+        @include border-radius(0);
+        @include transition(0.4s ease-in-out);
+        width: 200px;
+        padding: 5px 15px;
+        background-position: 90% 50%;
+        outline:none;
+        box-shadow:none;
+        border:0;
+        border-bottom:1px solid #ced4da;
+        text-indent: 0;
+        @media (max-width:990px) {
+          width: 150px;
+        }
+      }
+    }
+  }
+}

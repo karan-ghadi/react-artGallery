@@ -1,0 +1,81 @@
+.table-responsive{
+  @include box-shadow(0 .5rem 1rem rgba(0, 0, 0, .15) !important);
+  @include border-radius(20px);
+  width: 99%;
+  margin-bottom: 1rem;
+  @media (min-width:320px) and (max-width:767px) {
+    @include border-radius(10px);
+  }
+}
+.table {
+  background-color: transparent;
+  margin: 0 auto;
+
+  .thead {
+    background: $secondaryClr;
+    color: $whiteClr;
+
+    th {
+      @include font-size($base-font-sizes);
+      font-weight: 500;
+      border: 0;
+      padding: 30px 10px;
+      text-transform: uppercase;
+      @media (min-width:320px) and (max-width:767px) {
+        padding: 15px 10px;
+      }
+
+      &:first-child {
+        padding-left: 40px;
+      }
+
+      &:last-child {
+        padding-right: 40px;
+      }
+
+    }
+
+  }
+
+  td {
+    border: 0;
+    vertical-align: middle;
+    padding: 20px 10px;
+    @media (min-width:320px) and (max-width:767px) {
+      padding: 15px 10px;
+    }
+
+    &:first-child {
+      padding-left: 40px;
+    }
+
+    &:last-child {
+      padding-right: 40px;
+    }
+
+    button {
+      margin-right: 10px;
+      @media (max-width:1024px) {
+        margin-right: 0;
+        margin-bottom: 10px;
+        display: block;
+        min-width: 210px;
+        padding: 8px 30px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+
+  }
+
+  tr {
+    &:nth-child(even) {
+      background: #f6fbfd;
+    }
+
+  }
+
+}

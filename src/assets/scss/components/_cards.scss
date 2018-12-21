@@ -1,0 +1,149 @@
+.card-container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-column-gap: 24px;
+	margin-bottom: 70px;
+	@media (min-width:1366px) and (max-width:1369.98px) {
+			margin-bottom: 50px;
+	}
+	@media (min-width:768px) and (max-width:1024px) {
+			grid-template-columns: repeat(2, 2fr);
+			margin-bottom: 30px;
+	}
+	@media (max-width:767.98px) {
+			grid-template-columns: repeat(1, 2fr);
+			margin-bottom: 30px;
+	}
+	&.last {
+		margin-bottom: 0px;
+	}
+
+	&.card-container--dashboard {
+		grid-template-columns: 0.8fr 1fr 1fr 1fr 1fr;
+		@media (min-width:768px) and (max-width:1024px) {
+			grid-template-columns: repeat(3, 2fr);
+		}
+		@media (max-width:767.98px) {
+			grid-template-columns: repeat(1, 2fr);
+			margin-bottom: 30px;
+		}
+	}
+
+	ul {
+		display: flex;
+	}
+
+	.cards {
+		@include border-radius(10px);
+		@include box-shadow(0 .2rem 2.2rem rgba(0, 0, 0, .15));
+		background: $whiteClr;
+		overflow: hidden;
+		padding: 30px 40px;
+		text-align: left;
+		@media (min-width:1400px) and (max-width:1599.98px) {
+			padding: 25px 30px;
+		}
+		@media (min-width:1366px) and (max-width:1369.98px) {
+			padding: 25px;
+		}
+		@media (min-width:1280px) and (max-width:1365.98px) {
+			padding: 20px;
+		}
+		@media (min-width:768px) and (max-width:1024px) {
+			margin-bottom:20px;
+		}
+		@media (max-width:767.98px) {
+			padding: 20px;
+			margin-bottom:20px;
+		}
+
+		&.cards--app {
+			padding: 0;
+
+			.app-info {
+				padding: 25px 40px;
+
+				p {
+					color: $lightGrayClr;
+					margin: 20px 0 0 0;
+					line-height: 1.4;
+				}
+
+			}
+
+		}
+
+		&.card--btn {
+			background: $secondaryClr;
+			display: inline-grid;
+			cursor: pointer;
+
+			img {
+				place-self: center;
+			}
+
+		}
+
+		&.card--summary {
+			@include box-shadow(none);
+			background: transparent;
+			display: inline-grid;
+
+			.contents {
+				img {
+					margin-right: 10px;
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+			}
+
+		}
+
+		&.card--stats {
+			display: inline-grid;
+			text-align: center;
+		}
+
+		.contents {
+			place-self: center;
+
+			h2 {
+				color: $secondaryClr;
+			}
+
+			h6 {
+				color: $primaryClr;
+			}
+
+		}
+
+		h5 {
+			color: $primaryClr;
+			margin-bottom: 13px;
+			font-weight: 500;
+		}
+
+		ul {
+			li {
+				&:last-child {
+					margin-left: 30px;
+				}
+
+				img {
+					margin-right: 12px;
+					display: inline-block;
+				}
+
+				span {
+					vertical-align: middle;
+					text-transform: capitalize;
+				}
+
+			}
+
+		}
+
+	}
+
+}

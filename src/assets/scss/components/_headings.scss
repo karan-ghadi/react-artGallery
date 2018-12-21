@@ -1,0 +1,32 @@
+// font size 48px
+h2 {
+	@include font-size($extraLarge-font-sizes);
+	font-weight: 300;
+}
+
+// font size 30px
+h4 {
+	@include font-size($pageTitle-font-sizes);
+}
+
+// font size 22px
+h5 {
+	@include font-size($cardTitle-font-sizes);
+}
+
+// font size 18px
+h6 {
+	@include font-size($base-font-sizes);
+}
+
+/*
+font size 14px
+h6 {
+	@include font-size($extraSmall-font-sizes);
+}
+*/
+
+// font size 16px
+p {
+	@include font-size($small-font-sizes);
+}
